@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Get compiler version
+      run: g++ -v
     - name: Create output folder
       run: mkdir Build
     - name: make
