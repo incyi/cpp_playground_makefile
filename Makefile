@@ -19,7 +19,7 @@ SOURCE_FILES = main.cpp
 all: build
 
 build: $(SOURCE_FILES)
-$(CC) $(CFLAGS) -o $(TARGET) $(SOURCE_FILES)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SOURCE_FILES)
 
 clean:
-$(RM) $(TARGET)
+	$(RM) $(TARGET)
