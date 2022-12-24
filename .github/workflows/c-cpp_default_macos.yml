@@ -1,0 +1,19 @@
+name: C/C++ CI default macos-latest
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Create output folder
+      run: mkdir Build
+    - name: make
+      run: make
