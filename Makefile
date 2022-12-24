@@ -3,7 +3,7 @@
 ######
 
 # the compiler: gcc for C program, define as g++ for C++
-CC = gcc
+CC = g++
 
 # compiler flags:
 #  -g     - this flag adds debugging information to the executable file
