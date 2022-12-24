@@ -11,15 +11,12 @@ CC = gcc
 CFLAGS  = -g -Wall
 
 # The build target 
-TARGET = cpp_playground
+TARGET = main
 
-# All source files
-SOURCE_FILES = main.cpp
+all: $(TARGET)
 
-all: build
-
-build: $(SOURCE_FILES)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SOURCE_FILES)
+$(TARGET): $(TARGET).cpp
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
 
 clean:
 	$(RM) $(TARGET)
