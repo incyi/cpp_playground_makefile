@@ -1,9 +1,9 @@
-######
-# Makefile for my cpp_playground project  
-######
+###############################################################################
+# Makefile for my cpp_playground project                                      #
+###############################################################################
 
 # the compiler: gcc for C program, define as g++ for C++
-CC = g++
+CXX = g++
 
 # compiler flags:
 #  -g     - this flag adds debugging information to the executable file
@@ -11,12 +11,17 @@ CC = g++
 CFLAGS  = -g -Wall
 
 # The build target 
-TARGET = main
+TARGET = main.out
 
-all: $(TARGET)
+# The folders
+BUILD_FOLDER = Build
+SOURCES = Source
+INCLUDES = Include
 
-$(TARGET): $(TARGET).cpp
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
+.PHONY : clean
+
+all:
+	$(CXX) $(CFLAGS) -o $(BUILD_FOLDER)/main $(SOURCES)/main.cpp
 
 clean:
-	$(RM) $(TARGET)
+	$(RM) $(BUILD_FOLDER)/$(TARGET)
