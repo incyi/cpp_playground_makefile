@@ -1,0 +1,19 @@
+name: C/C++ CI default windows-latest
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Create output folder
+      run: mkdir Build
+    - name: make
+      run: make
