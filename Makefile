@@ -16,7 +16,6 @@ TARGET = main.out
 # The folders
 BUILD_FOLDER = Build
 SOURCES = Source
-INCLUDES = Include
 
 .PHONY : clean
 
